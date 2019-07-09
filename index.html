@@ -3,22 +3,42 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CSS3可自动折叠的垂直手风琴菜单DEMO演示</title>
+  <title>前端面试题</title>
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
       <link rel="stylesheet" href="css/style.css">
+      <style>
+    .container{
+      display: none;
+    }
+    .active{
+      display: block;
+    }
+    .answer{
+      height: 30px;;
+      width: 80px;
+      line-height: 30px;
+      color: aliceblue;
+      background-color: red;
+    }
+  
+      </style>
 </head>
 <body>
 <div style="text-align:center;clear:both;">
-<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-<script src="/follow.js" type="text/javascript"></script>
+
 </div>
 <div class="titlee">
-  <p>HTML&CSS 面试题</p>
+  <p class="answer">HTML&CSS </p>
+  <p class="answer">javaScript</p>
+  <p class="answer"">vue</p>
+  <p class="answer"">http</p>
+ 
 </div>
-<div class="container collapse">
+
+<div class="container active collapse">
   <details>
     <summary>1、简述一下你对HTML语义化的理解？</summary>
     <div class="details-wrapper">
@@ -878,13 +898,807 @@ float: left 将把元素移至左侧，并被其他元素环绕<br>
 
 </div>
 
+<div class="container collapse">
+  <details>
+    <summary>1、JavaScript 由以下三部分组成：</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</p>
+        <p>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解</p>
+        <p>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;</p>
+        <p>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、简述一下你对HTML语义化的理解？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          ECMAScript（核心）：JavaScript 语言基础 <br>
 
+DOM（文档对象模型）：规定了访问HTML和XML的接口 <br>
 
-  
+BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法 <br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>2、JS的基本数据类型和引用数据类型，类型判断用哪些方法？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>基本数据类型：undefined、null、boolean、number、string、symbol <br>
+
+          引用数据类型：object、array、function<br>
+          
+           
+          
+          类型判断typeof<br>
+          
+           instanceof 用于实例和构造函数的对应。</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>3、介绍JS有哪些内置对象？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          数据封装类对象：Object、Array、Boolean、Number、String <br>
+
+其他对象：Function、Arguments、Math、Date、RegExp、Error<br>
+
+ES6新增对象：Symbol、Map、Set、Promises、Proxy、Reflect<br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>4、JavaScript作用域？Javascript作用链域?</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>JavaScript作用域：<br>
+
+          在Java、C等语言中，作用域为for语句、if语句或{}内的一块区域，称为作用域；<br>
+          
+          而在 JavaScript 中，作用域为function(){}内的区域，称为函数作用域。<br>
+          Javascript作用链域?
+          <br>
+          全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节<br>
+          
+          如果当前作用域没有找到属性或方法，会向上层作用域查找，直至全局函数，这种形式就是作用域链<br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>5、JavaScript变量声明提升?var、let 及 const 区别？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          JavaScript变量声明提升：
+
+在JavaScript中，函数声明与变量声明经常被JavaScript引擎隐式地提升到当前作用域的顶部。 <br>
+
+声明语句中的赋值部分并不会被提升，只有名称被提升<br>
+
+函数声明的优先级高于变量，如果变量名跟函数名相同且未赋值，则函数声明会覆盖变量声明<br>
+
+如果函数有多个同名参数，那么最后一个参数（即使没有定义）会覆盖前面的同名参数<br>
+
+var、let 及 const 区别？<br>
+
+var 存在提升，我们能在声明之前使用。let、const 因为暂时性死区的原因，不能在声明前使用<br>
+
+var 在全局作用域下声明变量会导致变量挂载在 window 上，其他两者不会<br>
+
+let 和 const 作用基本一致，但是后者声明的变量不能再次赋值<br>
+
+var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。<br>
+
+let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。<br>
+
+const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改<br>
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>6、块级作用域 {}</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+       
+
+ES5 中作用域有：全局作用域、函数作用域。没有块作用域的概念。<br>
+
+ES6 中新增了块级作用域。块作用域由 { } 包括，if语句和 for语句里面的{ }也属于块作用域。<br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>7、介绍JavaScript的原型，原型链？有什么特点？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          原型：<br>
+
+JavaScript的所有对象中都包含了一个 [proto] 内部属性，这个属性所对应的就是该对象的原型 <br>
+
+JavaScript的函数对象，除了原型 [proto] 之外，还预置了 prototype 属性<br>
+
+当函数对象作为构造函数创建实例时，该 prototype 属性值将被作为实例对象的原型 [proto]。<br>
+
+原型链：<br>
+
+当一个对象调用的属性/方法自身不存在时，就会去自己 [proto] 关联的前辈 prototype 对象上去找<br>
+
+如果没找到，就会去该 prototype 原型 [proto] 关联的前辈 prototype 去找。依次类推，直到找到属性/方法或 undefined 为止。从而形成了所谓的“原型链”
+<br>
+原型特点：<br>
+
+JavaScript对象是通过引用来传递的，当修改原型时，与之相关的对象也会继承这一改变<br>
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>8、谈谈this对象的理解？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          this 总是指向函数的直接调用者 <br>
+
+如果有 new 关键字，this 指向 new 出来的实例对象<br>
+
+在事件中，this指向触发这个事件的对象<br>
+
+IE下 attachEvent 中的this总是指向全局对象Window<br>
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>9、eval是做什么的？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          eval的功能是把对应的字符串解析成JS代码并运行 <br>
+
+          应该避免使用eval，不安全，非常耗性能（先解析成js语句，再执行） <br>
+          
+          由JSON字符串转换为JSON对象的时候可以用 eval(’(’+ str +’)’); <br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>10、事件的代理/委托？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>事件委托是指将事件绑定目标元素的到父元素上，利用冒泡机制触发该事件 <br>
+
+          优点： <br>
+          
+          可以减少事件注册，节省大量内存占用 <br>
+          
+          可以将事件应用于动态添加的子元素上 <br>
+          
+          缺点： <br>
+          使用不当会造成事件在不应该触发时触发 <br></p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>11、什么是函数节流？介绍一下应用场景和原理？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>函数节流用于 onresize, onscroll 等短时间内会多次触发的事件 <br>
+
+          函数节流的原理：使用定时器做时间节流。<br>
+          当触发一个事件时，先用 setTimout 让这个事件延迟一小段时间再执行。<br>
+          如果在这个时间间隔内又触发了事件，就 clearTimeout 原来的定时器，<br>
+          再 setTimeout 一个新的定时器重复以上流程<br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>12、Javascript如何实现继承？javascript创建对象的几种方式？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        Javascript如何实现继承？ <br>
+
+        构造继承 <br>
+        
+        原型继承 <br>
+        
+        实例继承 <br>
+        
+        拷贝继承 <br>
+        
+        原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式 <br>
+        
+        javascript创建对象的几种方式？ <br>
+        
+        对象字面量的方式 <br>
+        
+        用function来模拟无参的构造函数 <br>
+        
+        用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性） <br>
+        
+        用工厂方式来创建（内置对象） <br>
+        
+        用原型方式来创建 <br>
+        
+        用混合方式来创建 <br>
+       </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>13、null，undefined 的区别？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>null，undefined 的区别？ <br>
+
+          null是一个表示"无"的对象，null 表示一个对象被定义了，值为“空值”，转为数值时为0；undefined 表示不存在这个值，undefined :是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined，转为数值时为NaN。
+          <br>
+          undefined： <br>
+          
+          　　（1）变量被声明了，但没有赋值时，就等于undefined。 <br>
+          
+          　　（2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。 <br>
+          
+          　　（3）对象没有赋值的属性，该属性的值为undefined。 <br>
+          
+          　　（4）函数没有返回值时，默认返回undefined。 <br>
+          
+          null： <br>
+          
+          　　（1） 作为函数的参数，表示该函数的参数不是对象。 <br>
+          
+          　　（2） 作为对象原型链的终点。 <br>
+          
+          （3）在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined <br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>14、说说你对闭包的理解？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+
+          使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念
+          <br>
+          闭包有三个特性：    <br>
+          
+          1.函数嵌套函数    <br>
+          
+          2.函数内部可以引用外部的参数和变量    <br>
+          
+          3.参数和变量不会被垃圾回收机制回收    <br>
+         </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>15、javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>use strict是一种ECMAscript 5 添加的（严格）运行模式,这种模式使得 Javascript 在更严格的条件下运行,使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为/p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>16、js延迟加载的方式有哪些？documen.write和 innerHTML的区别</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          js延迟加载的方式有哪些:<br>
+
+defer和async、动态创建DOM方式（用得最多）、使用setTimeout延迟方法<br>
+让JS最后加载<br>
+把js外部引入的文件放到页面底部，来让js最后引入，从而加快页面加载速度<br>
+
+documen.write和 innerHTML的区别:<br>
+
+document.write只能重绘整个页面<br>
+
+innerHTML可以重绘页面的一部分 <br>
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>17、那些操作会造成内存泄漏？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+
+          JavaScript 内存泄露指对象在不需要使用它时仍然存在，导致占用的内存不能使用或回收 <br>
+          
+          未使用 var 声明的全局变量 <br>
+          
+          闭包函数(Closures) <br>
+          
+          循环引用(两个对象相互引用) <br>
+          
+          控制台日志(console.log) <br>
+          
+          移除存在绑定事件的DOM元素(IE) <br>
+         </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>18、判断一个变量是否为数组？ 对象合并（数组合并）?</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          判断一个变量是否为数组: <br>
+          Instanceof<br>
+          
+          isArray<br>
+          
+          Object.prototype.toString<br>
+          
+          对象合并（数组合并）:<br>
+          
+          var obj = Object.assign(a,b)</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>19、列举一下JavaScript数组和对象有哪些原生方法？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+
+          数组：<br>
+          
+          arr.concat(arr1, arr2, arrn);<br>
+          arr.join(",");<br>
+          arr.sort(func);<br>
+          arr.pop();<br>
+          arr.push(e1, e2, en);<br>
+          arr.shift();<br>
+          unshift(e1, e2, en);<br>
+          arr.reverse();<br>
+          arr.slice(start, end);<br>
+          arr.splice(index, count, e1, e2, en);<br>
+          arr.indexOf(el);<br>
+          arr.includes(el); // ES6<br>
+          indexOf()和 lastIndexOf() （ES5新增）：indexOf()：接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的开头（位置 0）开始向后查找。<br>
+          lastIndexOf：接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的末尾开始向前查找。<br>
+          这两个方法都返回要查找的项在数组中的位置，或者在没找到的情况下返回-1。在比较第一个参数与数组中的每一项时，会使用全等操作符。<br>
+           
+          forEach() （ES5新增）forEach()：对数组进行遍历循环，对数组中的每一项运行给定函数。这个方法没有返回值。参数都是function类型，默认有传参，参数分别为：遍历的数组内容；第对应的数组索引，数组本身。
+           <br>
+          map() （ES5新增）map()：指“映射”，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。<br>
+           
+          filter() （ES5新增）filter()：“过滤”功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。<br>
+           
+          every() （ES5新增）every()：判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。<br>
+           
+          some() （ES5新增）some()：判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true。<br>
+           
+          reduce()和 reduceRight() （ES5新增）这两个方法都会实现迭代数组的所有项，然后构建一个最终返回的值。reduce()方法从数组的第一项开始，逐个遍历到最后。而 reduceRight()则从数组的最后一项开始，向前遍历到第一项。
+       
+          对象：<br>
+
+          object.hasOwnProperty(prop);<br>
+          object.propertyIsEnumerable(prop);<br>
+          object.valueOf();<br>
+          object.toString();<br>
+          object.toLocaleString();<br>
+          Class.prototype.isPropertyOf(object);<br>
+          Array.splice() 与 Array.splice() 的区别？<br>
+          slice – “读取”数组指定的元素，不会对原数组进行修改<br>
+          语法：arr.slice(start, end)<br>
+          start 指定选取开始位置（含）<br>
+          end 指定选取结束位置（不含）v
+          splice<br>
+          “操作”数组指定的元素，会修改原数组，返回被删除的元素<br>
+          语法：arr.splice(index, count, [insert Elements])<br>
+          index 是操作的起始位置<br>
+          count = 0 插入元素，count > 0 删除元素<br>
+          [insert Elements] 向数组新插入的元素<br>
+         
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>20、DOM操作——怎样添加、移除、移动、复制、创建和查找节点？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>（1）创建新节点 <br>
+
+          createDocumentFragment() //创建一个DOM片段<br>
+          
+          createElement() //创建一个具体的元素   createTextNode() //创建一个文本节点<br>
+          
+          （2）添加、移除、替换、插入<br>
+          
+          appendChild()    removeChild()    replaceChild()   insertBefore() //在已有的子节点前插入一个新的子节点<br>
+          
+          （3）查找<br>
+          
+          getElementsByTagName() //通过标签名称<br>
+          
+          getElementsByName() // 通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)<br>
+          
+          getElementById() //通过元素Id，唯一性<br>
+         </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>21、Ajax 是什么? 如何创建一个Ajax？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+
+          1、创建XMLHttpRequest对象 <br>
+          
+          2，创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.<br>
+          
+          3，设置响应HTTP请求状态变化的函数.<br>
+          
+          4，发送HTTP请求.<br>
+          
+          5，获取异步调用返回的数据.<br>
+          
+          6，使用JavaScript和DOM实现局部刷新.<br>
+         </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>22、JSON 的了解？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小。<br>
+
+格式：采用键值对，例如：{'age':'12', 'name':'back'}
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>23、你有哪些性能优化的方法？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          （1） 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。 <br>
+
+　　（2） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数 <br>
+
+　　（3） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。 <br>
+
+　　（4） 当需要设置的样式很多时设置className而不是直接操作style。 <br>
+
+　　（5） 少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。 <br>
+
+　　（6） 避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。 <br>
+
+（7） 图片预加载，将样式表放在顶部，将脚本放在底部 加上时间戳。 <br>
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>24、数组去重es5,es6？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p></p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>25、深拷贝浅拷贝？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>深拷贝两种方法：JSON.parse(JSON.stringify(obj))，第二种可以使用for...in加递归 <br>
+
+          浅拷贝：引用类型之间进行赋值操作，只是拷贝了引用类型的引用地址而非值，一个改变另一个也改变。</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>26、阻止事件冒泡和默认行为？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p> 
+
+          阻止事件冒泡：stopPropagation(),cancelBuble=true;<br>
+          
+          阻止默认行为：preventDefault,returnValue=false</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>27、cookie 和session 的区别？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1、cookie数据存放在客户的浏览器上，session数据放在服务器上。<br>
+
+2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>
+
+考虑到安全应当使用session。<br>
+
+3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>
+
+考虑到减轻服务器性能方面，应当使用COOKIE。<br>
+
+4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。v
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>28、描述 cookies、sessionStorage 和 localStorage 的区别？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p> <strong>与服务器交互：</strong> <br>
+
+          cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）<br>
+          
+          cookie 始终会在同源 http 请求头中携带（即使不需要），在浏览器和服务器间来回传递<br>
+          
+          sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存<br>
+          
+          <strong>存储大小：</strong> <br>
+          
+          cookie 数据根据不同浏览器限制，大小一般不能超过 4k<br>
+          
+          sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大
+          <br>
+          <strong>有期时间：</strong> <br>
+          
+          localStorage 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据<br>
+          
+          sessionStorage 数据在当前浏览器窗口关闭后自动删除<br>
+          
+          cookie 设置的cookie过期时间之前一直有效，与浏览器是否关闭无关<br>
+         </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>29、类的定义和继承的几种方式</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+         <strong> 类的定义:</strong> <br>
+          方式一：用构造函数模拟类（传统写法）<br>
+          
+          方式二：用 class 声明（ES6的写法）<br>
+
+         <strong>继承方式：</strong>  <br>
+
+          方式一：借助构造函数//这种方式，虽然改变了 this 的指向，但是，Child1 无法继承 Parent1 的原型。也就是说，如果我给 Parent1 的原型增加一个方法：这个方法是无法被 Child1 继承的。如下：
+          <br>
+          方法二：通过原型链实现继承//缺点是：如果修改 child1实例的name属性，child2实例中的name属性也会跟着改变。造成这种缺点的原因是：child1和child2共用原型。
+          <br>
+          方式三：组合的方式：构造函数 + 原型链//这种方式，能解决之前两种方式的问题：既可以继承父类原型的内容，也不会造成原型里属性的修改。这种方式的缺点是：让父亲Parent的构造方法执行了两次。
+          <br>
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>30、 什么是同源策略？</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+         
+同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，<br>不能读写对方资源。所以a.com下的js脚本采用ajax读取b.com里面的文件数据是会报错的。
+<br>
+• 不受同源策略限制的：<br>
+1、页面中的链接，重定向以及表单提交是不会受到同源策略限制的。<br>
+2、跨域资源的引入是可以的。但是js不能读写加载的内容。如嵌入到页面中的"等。
+
+        </p>
+      </div>
+    </div>
+  </details>
+ 
+   
+
+</div>
+<div class="container collapse">
+  <details>
+    <summary>2、 vue路由的钩子函数</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+         
+
+          首页可以控制导航跳转，beforeEach，afterEach等，<br> 
+          一般用于页面title的修改。一些需要登录才能调整页面的重定向功能。<br>
+          beforeEach主要有3个参数to，from，next：<br>
+
+to：route即将进入的目标路由对象，<br>
+
+from：route当前导航正要离开的路由<br>
+
+next：function一定要调用该方法resolve这个钩子。执行效果依赖next方法的调用参数。可以控制网页的跳转。
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>1、Vue组件间的参数传递</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+        <p>
+          1.父组件与子组件传值 <br>
+父组件传给子组件：子组件通过props方法接受数据; <br>
+子组件传给父组件：$emit方法传递参数 <br>
+2.非父子组件间的数据传递，兄弟组件传值 <br>
+eventBus，就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件。项目比较小时，用这个比较合适。（虽然也有不少人推荐直接用VUEX，具体来说看需求咯。技术只是手段，目的达到才是王道。）
+
+        </p>
+      </div>
+    </div>
+  </details>
+</div>
+<div class="container collapse">4</div>
 
     <script  src="js/index.js"></script>
 
+<script>
+var answer = document.getElementsByClassName('answer')
+var cont = document.getElementsByClassName('container')
+ for(var i=0;i<answer.length;i++){
+  answer[i].index=i;
+   answer[i].onclick= function(){
+    for(var i=0;i<answer.length;i++){
+      cont[i].className='container collapse ';
+      cont[this.index].className='active container collapse';
+    }
+   }
+ }
 
+
+
+</script>
 
 
 </body>

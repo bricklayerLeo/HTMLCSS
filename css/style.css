@@ -200,10 +200,13 @@ summary:focus {
           transform: rotate(225deg);
 }
 .titlee{
-  width: 300px;
+  width: 350px;
   margin: 0 auto;
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   font-weight:bold;
-  color: red;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
